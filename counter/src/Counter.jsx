@@ -27,7 +27,7 @@ const Counter = () => {
 
     return (
         <div className='main-container'>
-            <h2 className='header'>Counter Aapplication</h2>
+            <h2 className='header'>Counter Application</h2>
             <div>Current counter value :  <strong>{counter}</strong> </div>
             <br />
             <div className='buttons'>
