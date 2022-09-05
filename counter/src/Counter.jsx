@@ -31,8 +31,8 @@ const Counter = () => {
             <div>Current counter value :  <strong>{counter}</strong> </div>
             <br />
             <div className='buttons'>
-            <button className='button' id='startStop' onClick={onStartCounter}>{buttonName}</button>
-            <button className='button' onClick={onResetCounter}>Reset</button>
+                <button className='button' id='startStop' onClick={onStartCounter}>{buttonName}</button>
+                <button className='button' onClick={onResetCounter}>Reset</button>
             </div>
         </div>
     )
