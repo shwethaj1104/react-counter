@@ -1,53 +1,43 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 
+
+
+let timer;
 const Counter = () => {
     const [counter, setCounter] = useState(0);
     const [buttonName, setButonName] = useState('Start');
-    const [counterFlag, setCounterFlag] = useState(true);
-    let timer;
 
-    const onStartCounter=()=>{
-
+    const onStartCounter = () => {
         const name = document.getElementById("startStop").innerText
-        console.log("counterFlag",counterFlag)
-        if(name==='Start' && counterFlag===true){
+        if (name === 'Start') {
             setButonName('Pause')
+            setCounter(counter => counter + 1)
             timer = setInterval(() => {
                 setCounter(counter => counter + 1)
-                }, 1000);
-                console.log(name)
+            }, 1000);
+
         }
-        else if(name==='Pause'){
-            console.log(name)
+        else if (name === 'Pause') {
             setButonName('Start')
-            setCounterFlag(false)
-            // setCounter(counter)
             clearInterval(timer)
         }
     }
-
-    const onResetCounter=()=>{
-        setCounter(0)
-        setCounterFlag(false)
+    const onResetCounter = () => {
         clearInterval(timer)
-
+        setCounter(0)
+        setButonName('Start')
 
     }
-    // useEffect(()=>{
-    //     timer = setTimeout(() => {
-    //     setCounter(counter+1)
-    //     }, 1000);
-    // },[counter])
 
-  return (
-    <div>
 
-        <div>Current cunter value : {counter}</div>
-        <button  id='startStop' onClick={onStartCounter}>{buttonName}</button>
-        {/* <button  onClick={onStopCounter}>Stop</button> */}
-        <button  onClick={onResetCounter}>Reset</button>
-    </div>
-  )
+    return (
+        <div>
+
+            <div>Current cunter value : {counter}</div>
+            <button id='startStop' onClick={onStartCounter}>{buttonName}</button>
+            <button onClick={onResetCounter}>Reset</button>
+        </div>
+    )
 }
 
 export default Counter
