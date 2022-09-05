@@ -5,4 +5,5 @@ Application developed on React.js
 Checkout application at : https://counter-ecru-seven.vercel.app
 
 Landing page of Counter App : 
-![image](https://user-images.githubusercontent.com/107784718/188432081-1cd8938a-0462-4686-b5f6-2f6d9ac4f345.png)
+
+![image](https://user-images.githubusercontent.com/107784718/188432536-7e016999-6205-4dfc-b6fd-44079d4c3881.png)
