@@ -1,6 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react'
-
-
+import React, { useState } from 'react'
 
 let timer;
 const Counter = () => {
@@ -15,7 +13,6 @@ const Counter = () => {
             timer = setInterval(() => {
                 setCounter(counter => counter + 1)
             }, 1000);
-
         }
         else if (name === 'Pause') {
             setButonName('Start')
@@ -26,14 +23,12 @@ const Counter = () => {
         clearInterval(timer)
         setCounter(0)
         setButonName('Start')
-
     }
-
 
     return (
         <div className='main-container'>
             <h2 className='header'>Counter Aapplication</h2>
-            <div>Current counter value : {counter}</div>
+            <div>Current counter value :  <strong>{counter}</strong> </div>
             <br />
             <div className='buttons'>
             <button className='button' id='startStop' onClick={onStartCounter}>{buttonName}</button>
