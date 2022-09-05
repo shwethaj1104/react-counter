@@ -31,11 +31,14 @@ const Counter = () => {
 
 
     return (
-        <div>
-
-            <div>Current cunter value : {counter}</div>
-            <button id='startStop' onClick={onStartCounter}>{buttonName}</button>
-            <button onClick={onResetCounter}>Reset</button>
+        <div className='main-container'>
+            <h2 className='header'>Counter Aapplication</h2>
+            <div>Current counter value : {counter}</div>
+            <br />
+            <div className='buttons'>
+            <button className='button' id='startStop' onClick={onStartCounter}>{buttonName}</button>
+            <button className='button' onClick={onResetCounter}>Reset</button>
+            </div>
         </div>
     )
 }
