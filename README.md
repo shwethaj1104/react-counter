@@ -2,7 +2,7 @@
 
 Application developed on React.js
 
-Checkout application at : https://counter-ecru-seven.vercel.app
+Checkout application at :  https://counter-ecru-seven.vercel.app
 
 Landing page of Counter App : 
 
