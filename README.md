@@ -1,4 +1,4 @@
-# Simple counter
+#  counter
 
 Application developed on React.js
 
