@@ -1,4 +1,4 @@
-#  counter
+#  Counter App
 
 Application developed on React.js
 
